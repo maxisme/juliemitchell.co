@@ -1,7 +1,7 @@
 ---
-title: Lorem Ipsum
-description: Lorem Ipsum
+title: Lorem Ipsum Dolar
+description: Foo Bar
 image: /images/img_8787.jpg
-price: 300
+price: 250
 sold: true
 ---
