@@ -1,0 +1,25 @@
+backend:
+  name: test-repo
+media_folder: static/images
+public_folder: /images
+collections:
+  - name: 'work'
+    label: 'Work'
+    folder: 'content/work'
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Price', name: 'price', widget: 'number' }
+      - { label: 'Sold', name: 'sold', widget: 'boolean' }
+  - name: 'about'
+    label: 'About'
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "content/about.md"
+        fields:
+          - { label: About, name: about, widget: text }

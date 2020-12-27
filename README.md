@@ -1,0 +1,2 @@
+# juliemitchell.co
+`$ hugo serve`
