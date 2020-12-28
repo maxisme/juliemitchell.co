@@ -228,7 +228,7 @@ a img:hover, a img:focus, a img:active {
 }
 #work .work img {
   display: block;
-  max-width: 90%;
+  max-width: 100%;
   max-height: 600px;
   width: auto;
   height: auto;
