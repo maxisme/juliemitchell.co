@@ -1,8 +1,10 @@
 ---
-title: Something Else
-description: Something
+title: Pewter and Shaddow
+description: |-
+  Oil on canvas
+  37x46
 image: /images/img_8786.jpg
-price: 350
+price: 325
 sold: false
-type: Landscape
+type: Still Life
 ---
