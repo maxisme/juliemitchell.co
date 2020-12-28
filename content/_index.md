@@ -10,5 +10,8 @@ about: >-
   The making of landscapes’ which have become so much part of my summer occupation as I’ve been fortunate to spend prolonged time in Italy which has meant that I have been able to experiment with light and shade. The study of that, the deepest shadow which is created by an intense sun overhead has become a joy and preoccupation to make, oil on canvas, charcoal on paper.
 
 
+  ~
+
+
   For any enquiries please email [julie@juliemitchell.co](mailto:julie@juliemitchell.co)
 ---
