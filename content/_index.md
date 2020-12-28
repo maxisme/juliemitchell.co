@@ -1,3 +1,3 @@
 ---
-about: hello my name is julie
+about: For any enquiries please email julie@juliemitchell.co
 ---
