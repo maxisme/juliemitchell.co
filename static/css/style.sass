@@ -59,28 +59,21 @@ h1
   position: relative
   border: $border
   padding: 0.5em
-  margin-bottom: 1em
   text-transform: uppercase
   font-weight: 600
   letter-spacing: 0.15em
   transition: none
+  color: $lgrey
 
   a
     transition: none
     color: $white
 
     &:hover
-      color: $white !important
-      @include image-bg
+      color: $grey !important
 
 .centre
   text-align: center
-
-h2
-  margin-top: 2.5em
-  font-size: 1.2em
-  border-bottom: $border
-  font-weight: 600
 
 hr
   border: none
@@ -94,34 +87,13 @@ hr
   text-align: justify
   color: $grey
   margin-bottom: 2.5em
+  margin-right: 20px
 
 a
   text-align: center
 
-.good i
-  color: #248d3c
-
-.average i
-  color: #bc6d2e
-
-.learning i
-  color: #4677bc
-
-.subinfo
-  color: $lgrey
-
-  a
-    color: $lgrey
-    text-decoration: none
-    border-bottom: 1px $white dashed
-
 strong, strong > *
   font-weight: 600
-
-#portrait
-  position: absolute
-  z-index: -1
-  top: 0
 
 a
   color: $grey
@@ -224,7 +196,7 @@ a
     transform: translateX(0%)
 
 
-#post
+#work
   box-shadow: 5px 5px 40px rgba(0, 0, 0, .3)
   padding-left: 5em
   padding-right: 3em
@@ -233,6 +205,36 @@ a
   overflow-y: scroll
   max-height: 100vh
   min-height: 100vh
+
+  h1
+    padding-bottom: 0px
+    color: #fff
+    font-size: 5em
+
+  .categories
+    display: inline-flex
+    padding-bottom: 20px
+    position: relative
+    top: -30px
+  .work
+    width: 80%
+    h2
+      background: #000
+      color: #fff
+      margin: 0
+      text-align: left
+      display: table
+      font-size: 1.2em !important
+      font-weight: 600
+      padding: 3px
+    .description
+      margin: 0
+      padding-bottom: 15px
+    .sold
+      letter-spacing: 3px
+      color: $red
+      font-weight: 900
+      padding: 5px
 
   title
     display: block
