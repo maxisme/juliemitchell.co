@@ -28,12 +28,6 @@
             <meta property="og:image:height" content="627"/>
         {{ end }}
         <meta property="og:description" content="{{ .Params.meta_description }}"/>
-        <meta property="og:site_name" content="max.me.uk"/>
-        <meta property="og:locale" content="en_GB"/>
-
-        <!-- Twitter Card data -->
-        <meta name="twitter:site" content="@maxisme">
-        <meta name="twitter:creator" content="@maxisme">
     {{ end }}
 
     <!-- mobile meta -->
@@ -59,151 +53,15 @@
     <div id="sidebar" class="col {{ if $isHome }} l4 m7 s12 {{else}} slide-in-on-mobile-blog l4 s8{{end}} sidebar">
         <div align="center">
             <h1><a href="/">Julie<br>Mitchell </a></h1>
+            {{ with .Site.GetPage "_index.md" }}
+                <div class="info">{{ .Params.about | markdownify }}</div>
+            {{end}}
         </div>
-        {{ with .Site.GetPage "_index.md" }}
-            <p class="info">{{ .Params.description }}</p>
-        {{ end }}
-        <div class="row">
-            <!-- using https://maxwellito.github.io/vivus-instant/ -->
-            <a class="col s6" href="mailto:max@max.me.uk"><img class="ico" src="/images/mail_animated.svg"><br>Email</a>
-            <a class="col s6" target="_blank" href="https://github.com/maxisme">
-                <img class="ico" src="/images/github_animated.svg">
-                <br>GitHub
-            </a>
-        </div>
-        <div class="row">
-            <a class="col s6" target="_blank" href="https://www.linkedin.com/in/maxisme">
-                <img class="ico"
-                     src="/images/linkedin_animated.svg">
-                <br>Linked In
-            </a>
-            <a class="col s6" target="_blank" href="https://stackoverflow.com/story/maxisme">
-                <img class="ico"
-                     src="/images/stackoverflow_animated.svg">
-                <br>StackOverflow
-            </a>
-        </div>
-
-        {{ if .Params.projects }}
-            <h2>Selected Projects</h2>
-
-            <!--- projects -->
-            {{ range .Params.projects }}
-                {{ $favicon := (printf "%s/images/icon.ico" .url) }}
-                {{ if .ico_url }}
-                    {{ $favicon = .ico_url }}
-                {{ end }}
-
-                <div class="row valign-wrapper">
-                    <div class="col valign">
-                        <a target="_blank" href="{{ .url }}">
-                            <img class="ico" src="{{ $favicon }}">
-                        </a>
-                    </div>
-                    <div class="col valign">
-                        <a class="valign" target="_blank" href="{{ .url }}">{{ .name }}</a>
-                    </div>
-                </div>
-            {{ end }}
-        {{ end }}
-
-        <h2><a href="/blog/">Blog Posts</a></h2>
-
-        {{ if .Params.projects }}
-            <!-- only show 3 newest blog posts -->
-            {{ $cnt := 0 }}
-            {{ range where .Site.RegularPages "Section" "blog" }}
-                {{ $cnt = add $cnt 1}}
-                {{ if lt $cnt 4 }}
-                    <li><a href="{{ .Permalink }}">{{ .Params.title | title }}</a></li>
-                {{ end}}
-            {{ end }}
-            {{ if ge $cnt 4 }}
-                <li><a href="/blog/">More...</a></li>
-            {{ end }}
-        {{ else }}
-            <!-- show all blog posts -->
-            {{ range where .Site.RegularPages "Section" "blog" }}
-                <li><a href="{{ .Permalink }}">{{ .Params.title | title }}</a></li>
-            {{ end }}
-        {{ end }}
-
-        {{ if .Params.projects }}
-            <h2>My areas of expertise</h2>
-            <p>
-                {{ .Params.areas_of_expertise }}
-            </p>
-            <h2>My extra areas of interest</h2>
-            <p>
-                {{ .Params.extra_areas_of_interest }}
-            </p>
-
-            <h2>Languages & Tools I'm good with</h2>
-            <div class="good">
-                {{ range .Params.good_tools }}
-                    <div class="row valign-wrapper">
-                        <div class="col">
-                            <i class="ico {{ .devicon }}"></i>
-                        </div>
-                        <div class="col valign">
-                            {{ .languages_or_tool }}
-                        </div>
-                    </div>
-                {{ end }}
-            </div>
-
-            <h2>Languages & Tools I know</h2>
-            <div class="average">
-                {{ range .Params.know_tools }}
-                    <div class="row valign-wrapper">
-                        <div class="col">
-                            <i class="ico {{ .devicon }}"></i>
-                        </div>
-                        <div class="col valign">
-                            {{ .languages_or_tool }}
-                        </div>
-                    </div>
-                {{ end }}
-            </div>
-
-            <h2>Languages & Tools I'm learning</h2>
-            <div class="learning">
-                {{ range .Params.learning_tools }}
-                    <div class="row valign-wrapper">
-                        <div class="col">
-                            <i class="ico {{ .devicon }}"></i>
-                        </div>
-                        <div class="col valign">
-                            {{ .languages_or_tool }}
-                        </div>
-                    </div>
-                {{ end }}
-            </div>
-
-            <h2>Languages & Tools I'm not good with</h2>
-            <div>
-                {{ range .Params.bad_tools }}
-                    <div class="row valign-wrapper">
-                        <div class="col">
-                            <i class="ico {{ .devicon }}"></i>
-                        </div>
-                        <div class="col valign">
-                            {{ .languages_or_tool }}
-                        </div>
-                    </div>
-                {{ end }}
-            </div>
-
-            <hr>
-            {{ safeHTML .Params.blurb }}
-            <p>&nbsp;</p>
-        {{ end }}
     </div>
-    {{ if not $isHome }}
-    <!--- blog post -->
-    <div id="post" class="col l8 offset-l4 m12 s12">
 
+    <!--- posts -->
+    <div id="work" class="col l8 offset-l4 m12 s12">
         <a href="#" class="top-nav sidenav-trigger full hide-on-large-only">
             <i class="material-icons">menu</i>
         </a>
-{{end}}
+        <div align="center">

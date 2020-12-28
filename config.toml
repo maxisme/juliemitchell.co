@@ -7,3 +7,6 @@ home = ["HTML", "RSS", "JSON"]
 changefreq = "monthly"
 filename = "sitemap.xml"
 priority = 0.5
+[taxonomies]
+  still-lifes = "still-lifes"
+  landscapes = "landscapes"

@@ -1,0 +1,11 @@
+<div class="row work" >
+    <img class="lazy" src="{{ .Params.image }}" width="60%">
+    <br><br>
+    <h2>{{ .Params.title | title }}</h2>
+    {{ if .Params.price }}
+        <div class="price">£{{.Params.price}}</div>
+    {{ else }}
+        <btn class="sold">SOLD</btn>
+    {{ end }}
+    <p class="description">{{.Params.description}}</p>
+</div>

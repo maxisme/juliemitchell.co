@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+<h1>Landscapes</h1>
+<div class="categories">
+    <a href="/">All</a> // <a href="/still-lifes/">Still Lifes</a>
+</div>
+{{ range where .Site.RegularPages "Section" "work" }}
+    {{ if eq .Type "Landscape" }}
+        {{ partial "work.html" . }}
+    {{ end}}
+{{ end }}
+
+{{ partial "footer.html" }}
