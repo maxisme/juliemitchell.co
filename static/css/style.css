@@ -226,6 +226,13 @@ a img:hover, a img:focus, a img:active {
 #work .work {
   width: 80%;
 }
+#work .work img {
+  display: block;
+  max-width: 90%;
+  max-height: 600px;
+  width: auto;
+  height: auto;
+}
 #work .work h2 {
   background: #000;
   color: #fff;
