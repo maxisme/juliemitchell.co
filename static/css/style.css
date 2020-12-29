@@ -215,13 +215,17 @@ a img:hover, a img:focus, a img:active {
 #work h1 {
   padding-bottom: 0px;
   color: #fff;
-  font-size: 4em !important;
+  font-size: 5.5vh !important;
 }
 #work .categories {
   display: inline-flex;
   padding-bottom: 20px;
   position: relative;
   top: -30px;
+}
+#work .categories * {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 #work .work {
   width: 80%;
