@@ -10,12 +10,6 @@ fields:
   label: Title
   config:
     required: true
-- type: text
-  name: description
-  label: Description
-  config:
-    required: true
-  default: Oil on Canvas
 - type: number
   name: price
   label: Price
@@ -35,6 +29,15 @@ fields:
       file: 
       path: 
   label: Type
+- name: description
+  type: textarea
+  default: Oil on canvas
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Description
 pages:
 - content/work/2-artichokes.md
 - content/work/3-leaves-in.md
