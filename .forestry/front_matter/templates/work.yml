@@ -36,6 +36,8 @@ fields:
   label: Type
 pages:
 - content/work/2-artichokes.md
+- content/work/3-leaves-in.md
+- content/work/artichoke-1.md
 - content/work/lorem-ipsum.md
 - content/work/olive-grove.md
 - content/work/olive-tree.md
