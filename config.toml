@@ -1,8 +1,9 @@
 baseURL = "https://juliemitchell.co/"
 languageCode = "en-gb"
 title = "Julie Mitchell"
+assetDir = "static"
 [outputs]
-home = ["HTML", "RSS", "JSON"]
+home = ["HTML"]
 [sitemap]
 changefreq = "monthly"
 filename = "sitemap.xml"

@@ -1,5 +1,7 @@
 <div class="row work" >
-    <img class="lazy" src="{{ .Params.image }}">
+    {{ $image := resources.Get .Params.image }}
+    {{ $img := $image.Resize "x1000" }}
+    <img class="lazy" src="{{ $img.RelPermalink }}">
     <br>
     <h2>{{ .Params.title | title }}</h2>
     {{ if .Params.price }}
