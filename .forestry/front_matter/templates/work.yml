@@ -15,6 +15,7 @@ fields:
   label: Description
   config:
     required: true
+  default: Oil on Canvas
 - type: number
   name: price
   label: Price
