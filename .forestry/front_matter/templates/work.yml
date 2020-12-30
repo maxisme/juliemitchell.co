@@ -11,14 +11,11 @@ fields:
   config:
     required: true
 - name: description
-  type: textarea
-  default: Oil on canvas
+  type: text
   config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: markdown
+    required: false
   label: Description
+  default: Oil on canvas
 - type: number
   name: price
   label: Price
@@ -38,6 +35,36 @@ fields:
       file: 
       path: 
   label: Type
+- name: dimensions
+  type: boolean
+  label: Dimensions
+  description: Do you have the dimensions?
+- name: width
+  type: number
+  label: Width
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+  showOnly:
+    field: dimensions
+    value: true
+- name: height
+  type: number
+  label: Height
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+  showOnly:
+    field: dimensions
+    value: true
 pages:
 - content/work/2-artichokes.md
 - content/work/3-leaves-in.md
