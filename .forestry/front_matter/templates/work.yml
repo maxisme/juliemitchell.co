@@ -34,3 +34,5 @@ fields:
       file: 
       path: 
   label: Type
+pages:
+- content/work/yorkshire-landscape.md
