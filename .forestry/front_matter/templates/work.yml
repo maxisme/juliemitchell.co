@@ -35,6 +35,7 @@ fields:
       path: 
   label: Type
 pages:
+- content/work/olive-trees-2.md
 - content/work/quince.md
 - content/work/seeds-and-iris.md
 - content/work/test.md
