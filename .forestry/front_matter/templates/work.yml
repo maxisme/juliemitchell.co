@@ -10,31 +10,6 @@ fields:
   label: Title
   config:
     required: true
-- name: description
-  type: text
-  config:
-    required: false
-  label: Description
-  default: Oil on canvas
-- type: number
-  name: price
-  label: Price
-  config:
-    step: 5
-- name: type
-  type: select
-  default: Still Life
-  config:
-    required: true
-    options:
-    - Still Life
-    - Landscape
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Type
 - name: dimensions
   type: boolean
   label: Dimensions
@@ -65,6 +40,31 @@ fields:
   showOnly:
     field: dimensions
     value: true
+- name: description
+  type: text
+  config:
+    required: false
+  label: Description
+  default: Oil on canvas
+- type: number
+  name: price
+  label: Price
+  config:
+    step: 5
+- name: type
+  type: select
+  default: Still Life
+  config:
+    required: true
+    options:
+    - Still Life
+    - Landscape
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Type
 pages:
 - content/work/2-artichokes.md
 - content/work/3-leaves-in.md
