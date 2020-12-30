@@ -35,7 +35,9 @@ fields:
       path: 
   label: Type
 pages:
+- content/work/quince.md
 - content/work/seeds-and-iris.md
+- content/work/test.md
 - content/work/tuscan-landscape.md
 - content/work/walnut-tree.md
 - content/work/yorkshire-landscape.md

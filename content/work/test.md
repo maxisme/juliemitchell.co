@@ -1,5 +1,5 @@
 ---
-image: /images/caed44ce-4b42-45a1-9274-e72ee36db73b.jpeg
+image: "/images/caed44ce-4b42-45a1-9274-e72ee36db73b.jpeg"
 title: Seed Pod Form
 description: |-
   Oil on canvas
@@ -7,4 +7,5 @@ description: |-
 price: 125
 sold: false
 type: Still Life
+
 ---
