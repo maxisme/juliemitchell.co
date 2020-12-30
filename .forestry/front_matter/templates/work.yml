@@ -36,6 +36,7 @@ fields:
   label: Type
 pages:
 - content/work/lorem-ipsum.md
+- content/work/olive-tree.md
 - content/work/olive-trees-2.md
 - content/work/olive-trees.md
 - content/work/pewter-vase-with-pomegranate.md
