@@ -35,4 +35,5 @@ fields:
       path: 
   label: Type
 pages:
+- content/work/walnut-tree.md
 - content/work/yorkshire-landscape.md
