@@ -211,7 +211,7 @@ a img:hover, a img:focus, a img:active {
 #work h1 {
   padding-bottom: 0px;
   color: #fff;
-  font-size: 5.5vh !important;
+  font-size: 7.5vw !important;
 }
 #work .categories {
   display: inline-flex;
@@ -245,6 +245,11 @@ a img:hover, a img:focus, a img:active {
 }
 #work .work .description {
   margin: 0;
+}
+#work .work .dimensions {
+  padding: 0;
+  margin: 0;
+  font-style: italic;
   padding-bottom: 15px;
 }
 #work .work .sold {

@@ -10,4 +10,7 @@
         <btn class="sold">SOLD</btn>
     {{ end }}
     <p class="description">{{.Params.description}}</p>
+    {{ if and .Params.width .Params.height}}
+        <div class="dimensions">{{ .Params.width }} x {{ .Params.height }} cm</div>
+    {{ end }}
 </div>
