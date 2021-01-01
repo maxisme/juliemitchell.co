@@ -2,7 +2,6 @@
     {{ $image := resources.Get .Params.image }}
     {{ $img := $image.Resize "x1000" }}
     <img class="lazy" src="{{ $img.RelPermalink }}">
-    <br>
     <h2>{{ .Params.title | title }}</h2>
     {{ if .Params.price }}
         <div class="price">£{{.Params.price}}</div>
@@ -10,7 +9,9 @@
         <btn class="sold">SOLD</btn>
     {{ end }}
     <p class="description">{{.Params.description}}</p>
-    {{ if and .Params.width .Params.height}}
-        <div class="dimensions">{{ .Params.width }} x {{ .Params.height }} cm</div>
-    {{ end }}
+    <div class="dimensions">
+        {{ if and .Params.width .Params.height}}
+            {{ .Params.width }} x {{ .Params.height }} cm
+        {{ end }}
+    </div>
 </div>

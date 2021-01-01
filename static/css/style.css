@@ -237,6 +237,7 @@ a img:hover, a img:focus, a img:active {
   background: #000;
   color: #fff;
   margin: 0;
+  margin-top: 5px;
   text-align: left;
   display: table;
   font-size: 1.2em !important;
