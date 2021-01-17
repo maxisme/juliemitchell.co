@@ -8,7 +8,7 @@ on:
       - ".forestry/**"
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: azure/setup-helm@v1
@@ -24,7 +24,12 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           tag_with_ref: true
           tag_with_sha: true
-      - name: Update Helm
+  deploy:
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upgrade helm
         if: github.ref == 'refs/heads/master'
         run: |
           mkdir ~/.kube
