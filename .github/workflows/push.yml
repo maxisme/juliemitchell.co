@@ -11,6 +11,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: azure/setup-helm@v1
+        if: github.ref == 'refs/heads/master'
       - uses: actions/checkout@master
         with:
           fetch-depth: '0'
@@ -22,13 +24,13 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           tag_with_ref: true
           tag_with_sha: true
-      - name: Update Swarm
+      - name: Update Helm
         if: github.ref == 'refs/heads/master'
         run: |
+          mkdir ~/.kube
+          helm repo add maxisme 'https://${{secrets.GH_PA_TOKEN}}@raw.githubusercontent.com/maxisme/infra/master/k8s/charts/
+          helm repo update
+          echo "${{ secrets.B64_KUBE_CONFIG }}" | base64 --decode > ~/.kube/config
           export sha="${{ github.sha }}"
-          curl -fs -X POST ${{ secrets.SWARM_HOOK }} \
-          -H 'Content-Type: application/x-www-form-urlencoded' \
-          -d 'service=juliemitchellco_web' \
-          -d "tag=sha-${sha:0:7}" \
-          -d "image=${{ github.repository }}" \
-          -d "token=${{ secrets.HOOK_TOKEN }}"
+          helm upgrade juliemitchellco maxisme/staticweb -f helm-values.yml --set="image.tag=sha-${sha:0:7}"
+          rm ~/.kube/config
