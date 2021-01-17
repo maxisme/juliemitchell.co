@@ -1,4 +1,3 @@
-
 ingress:
   match: "Host(`juliemitchell.co`)"
 
