@@ -1,5 +1,7 @@
+
 ingress:
   match: "Host(`juliemitchell.co`)"
 
 image:
   repository: "maxisme/juliemitchell.co"
+        
