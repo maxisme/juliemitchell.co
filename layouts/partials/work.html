@@ -3,9 +3,6 @@
     {{ $img := $image.Resize "x1000" }}
     <img class="lazy artwork-image" src="{{ $img.RelPermalink }}" alt="{{ .Params.title | title }}">
     <h2>{{ .Params.title | title }}</h2>
-    {{ if .Params.price }}
-    <div class="price">£{{.Params.price}}</div>
-    {{ end }}
     <p class="description">{{.Params.description}}</p>
     <div class="dimensions">
         {{ if and .Params.width .Params.height }}
