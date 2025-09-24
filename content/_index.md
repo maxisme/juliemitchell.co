@@ -1,7 +1,7 @@
 ---
 about: |2
 
-  For enquiries please email [julie@juliemitchell.co](mailto:julie@juliemitchell.co)
+  For enquiries please email [juliemitchell2@icloud.com](mailto:juliemitchell2@icloud.com)
 
   ~
 
